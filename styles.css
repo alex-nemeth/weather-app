@@ -1,0 +1,8 @@
+.content {
+    display: grid;
+    background-color: rgb(42, 42, 108);
+    color: white;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+}
