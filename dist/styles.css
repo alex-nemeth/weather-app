@@ -8,9 +8,14 @@ body {
 }
 
 .content {
-    background-color: rgb(42, 42, 108);
     color: white;
     width: 30vw;
+    height: 40vh;
     padding: 10px 20px;
     border-radius: 10px;
+    background-color: rgb(154, 154, 154);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center, center;
+    background-blend-mode: darken;
 }
