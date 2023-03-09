@@ -21,7 +21,7 @@ h3 {
     height: 45vh;
     padding: 10px 20px;
     border-radius: 10px;
-    background-image: url("../src/images/default.jpg");
+    background-image: url("../images/default.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, center;
