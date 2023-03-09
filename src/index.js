@@ -1,10 +1,11 @@
-let appid = "1eb1dbe460ce3064486af8f6b092cab8";
+import { appid, bgAppid } from "./appid.js";
 
 const searchBar = document.querySelector(".search-bar");
 const searchButton = document.querySelector(".search-button");
 const loc = document.querySelector(".location");
 const temp = document.querySelector(".temp");
 const conditions = document.querySelector(".conditions");
+const content = document.querySelector(".content");
 
 searchButton.addEventListener("click", () => initSearch());
 searchBar.addEventListener("keypress", (e) => {
@@ -20,8 +21,14 @@ function initSearch() {
     fetch(url)
         .then((response) => response.json())
         .then((json) => {
-            if ((json.name = undefined)) {
-                alert("City not found");
+            console.log(json.weather[0]);
+
+            if (json.cod === "404") {
+                loc.innerHTML = "City not found";
+                return;
+            }
+            if (json.cod === "400") {
+                return;
             }
             loc.innerHTML = json.name;
             conditions.textContent = json.weather[0].main;
@@ -29,6 +36,3 @@ function initSearch() {
         });
     searchBar.value = "";
 }
-
-//fix undefined error
-//protect api
