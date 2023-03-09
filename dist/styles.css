@@ -7,15 +7,57 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
 .content {
-    color: white;
-    width: 30vw;
-    height: 40vh;
+    color: rgb(253, 253, 253);
+    width: 20vw;
+    height: 45vh;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: rgb(154, 154, 154);
+    background-image: url("../src/images/default.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center, center;
     background-blend-mode: darken;
+}
+
+.search-bar-btn {
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    margin-left: 10px;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 100%;
+}
+
+.search-button:hover {
+    background-color: rgb(161, 200, 237);
+}
+
+.search-button:active {
+    background-color: rgb(149, 178, 206);
+}
+
+.search-bar {
+    height: 3.5vh;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.search-bar:focus {
+    background-color: rgb(234, 245, 255);
+}
+
+.icon {
+    fill: black;
 }

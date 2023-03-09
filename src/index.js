@@ -15,7 +15,6 @@ searchBar.addEventListener("keypress", (e) => {
     }
 });
 
-//clear clouds rain drizzle thunderstorm snow mist smoke haze dust fog sand dust ash squall tornado
 function conditionsBackground(weatherCondition) {
     if (weatherCondition === "Clear") {
         content.style.backgroundImage = `url(../src/images/clear.jpg)`;
@@ -56,8 +55,6 @@ function initSearch() {
     fetch(url)
         .then((response) => response.json())
         .then((json) => {
-            console.log(json.weather[0]);
-
             if (json.cod === "404") {
                 loc.innerHTML = "City not found";
                 return;
